@@ -5,12 +5,19 @@
   <link rel="stylesheet" href="/styles-index.css">
 </head>
 <body>
-  <h1>Daftar Produk</h1>
-  <ul>
+  <h1>Tambahkan Produk ke Keranjang</h1>
+<form action="/add-to-cart" method="post">
+  <label for="productName">Nama Produk:</label>
+  <select id="productName" name="productName">
     <% products.forEach(product => { %>
-      <li><%= product.name %> - $<%= product.price %> <a href="/add-to-cart/<%= product.id %>">Tambahkan ke Keranjang</a></li>
+      <option value="<%= product.name %>"><%= product.name %></option>
     <% }); %>
-  </ul>
+  </select>
+  <br>
+  <label for="quantity">Jumlah:</label>
+  <input type="number" id="quantity" name="quantity" value="1" min="1"><br>
+  <button type="submit">Tambahkan ke Keranjang</button>
+</form>
 
   <h2>Keranjang Belanja</h2>
   <ul>
