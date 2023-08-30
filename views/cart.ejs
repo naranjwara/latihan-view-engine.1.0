@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/styles-cart.css">
+  <title>Keranjang Belanja</title>
+</head>
+<body>
+  <h1>Keranjang Belanja</h1>
+  <ul>
+    <% cartItems.forEach(item => { %>
+      <li><%= item.name %> - $<%= item.price %></li>
+    <% }); %>
+  </ul>
+  <p>Total: $<%= total %></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/styles-index.css">
+  <title>POS App</title>
+</head>
+<body>
+  <h1>Daftar Produk</h1>
+  <ul>
+    <% products.forEach(product => { %>
+      <li><%= product.name %> - $<%= product.price %> <a href="/add-to-cart/<%= product.id %>">Tambahkan ke Keranjang</a></li>
+    <% }); %>
+  </ul>
+
+  <h2>Keranjang Belanja</h2>
+  <ul>
+    <% cartItems.forEach(item => { %>
+      <li><%= item.name %> - $<%= item.price %></li>
+    <% }); %>
+  </ul>
+  <p>Total: $<%= total %></p>
+</body>
+</html>
