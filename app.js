@@ -13,9 +13,9 @@ const products = [
 
 let cartItems = []; 
 
-app.get('/',(req, res)=>{
-    res.render('index',{products, cartItems});
-});
+app.get('/', (req, res) => {
+    res.render('index', { products, cartItems });
+  });
 
 app.get('/add-to-cart/:id', (req, res) => {
     //request parameter id dan mengubah id menjadi bilangan bulat

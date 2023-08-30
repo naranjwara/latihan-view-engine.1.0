@@ -16,20 +16,24 @@ let cartItems = []; // Simpan item keranjang
 
 app.get('/', (req, res) => {
     const total = calculateTotal(cartItems);
-    res.render('index', { products, cartItems, total});
-});
+    res.render('index', { products, cartItems, total });
+  });
 
 // Tambahkan item ke keranjang
 app.get('/add-to-cart/:id', (req, res) => {
-  const productId = parseInt(req.params.id);
-  const product = products.find(item => item.id === productId);
-
-  if (product) {
-    cartItems.push(product);
-  }
-
-  res.redirect('/');
-});
+    const productId = parseInt(req.params.id);
+    const quantity = parseInt(req.query.quantity) || 1; // Mengambil jumlah, default 1
+    const product = products.find(item => item.id === productId);
+  
+    if (product) {
+      // Menambahkan item dengan jumlah ke keranjang
+      for (let i = 0; i < quantity; i++) {
+        cartItems.push(product);
+      }
+    }
+  
+    res.redirect('/');
+  });
 
 // Hitung total harga di keranjang
 function calculateTotal(cart) {
