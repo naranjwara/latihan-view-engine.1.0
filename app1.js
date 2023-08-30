@@ -15,7 +15,8 @@ const products = [
 let cartItems = []; // Simpan item keranjang
 
 app.get('/', (req, res) => {
-  res.render('index', { products, cartItems });
+    const total = calculateTotal(cartItems);
+    res.render('index', { products, cartItems, total});
 });
 
 // Tambahkan item ke keranjang

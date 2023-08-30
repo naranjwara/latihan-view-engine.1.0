@@ -1,60 +1,59 @@
 /* Reset some default styles for better consistency */
 body, ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Set a background color for the whole page */
-  body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Style the headings */
-  h1, h2 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* Style the product list */
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background color for the whole page */
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the headings */
+h1, h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style the product list */
+ul {
+  list-style: none;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style individual product items */
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style the "Tambahkan ke Keranjang" link */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Style the cart section */
+#cart {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the total price section */
+p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   ul {
-    list-style: none;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style individual product items */
-  li {
-    margin-bottom: 10px;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
   }
-  
-  /* Style the "Tambahkan ke Keranjang" link */
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  /* Style the cart section */
-  #cart {
-    background-color: #fff;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Style the total price section */
-  p {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    ul {
-      padding: 10px;
-    }
-  }
-  
+}

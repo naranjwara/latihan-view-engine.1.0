@@ -41,7 +41,7 @@ app.get('/add-to-cart/:id', (req, res) => {
     });
 
     app.listen(port, () => {
-        console.log(`Server berjalan pada http://localhost:${port}`);
+        console.log(`Server berjalan pada port 3000`);
     });
 
 });
